@@ -48,26 +48,29 @@ public class Solution {
     }
 }
 
-class CompoundQuestion{
-    ArrayList<Question> questions;
+class Question{
+    ArrayList<Statement> statements;
     boolean isAnd;
     boolean response;
-    public CompoundQuestion(boolean response){
-        questions = new ArrayList<>();
+    public Question(ArrayList<Statement> statements,boolean response,boolean isAnd){
+
+        this.statements = statements;
+        this.response = response;
+        this.isAnd = isAnd;
     }
     
-    public void addQuestion(Question question){
-        questions.add(question);
+    public void addQuestion(Statement question){
+        statements.add(question);
     }
 }
 
-class Question{
-    boolean colorQuestion;
-    private int position;
+class Statement{
+    boolean colorStatement;
+    private int number;
     private String color;
-    public Question(boolean colorQuestion,int position,String color){
-        this.colorQuestion = colorQuestion;
-        this.position = position;
+    public Statement(boolean colorStatement,int number,String color){
+        this.colorStatement = colorStatement;
+        this.number = number;
         this.color = color;
     }    
 }
