@@ -21,9 +21,19 @@ public class Solution {
             int lies = theScan.nextInt();
             theScan.nextLine();
             for(int theQuestion = 0;theQuestion<questions;theQuestion++){
+                ArrayList currQuestion = new ArrayList<>();
                 String currLine = theScan.nextLine();
                 Scanner lineScan = new Scanner(currLine);
-                String questonType = lineScan.next();
+                String questionType = lineScan.next();
+                if(questionType.equals("color")){
+                    while(lineScan.hasNext()) {
+                        int position = lineScan.nextInt();
+                        String color = lineScan.next();
+
+                    }
+                }else{
+
+                }
             }
 
         }
