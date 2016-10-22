@@ -6,7 +6,7 @@ public class Solution {
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Balloon[] balloons = new Balloon[10];
-        for(int i = 0;i<balloons.size;i++){
+        for(int i = 0;i<balloons.length;i++){
             balloons[i] = new Balloon();
         }
         Scanner theScan = new Scanner(System.in);
@@ -19,7 +19,13 @@ public class Solution {
         for(int testCase = 0;testCase<numTestCases;testCase++){
             int questions = theScan.nextInt();
             int lies = theScan.nextInt();
-            
+            theScan.nextLine();
+            for(int theQuestion = 0;theQuestion<questions;theQuestion++){
+                String currLine = theScan.nextLine();
+                Scanner lineScan = new Scanner(currLine);
+                String questonType = lineScan.next();
+            }
+
         }
         
         
